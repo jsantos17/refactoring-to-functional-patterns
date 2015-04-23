@@ -27,13 +27,13 @@
   De Deitel\&Deitel:
   \begin{itemize}
     \item `Using an incorrect relational operator or an incorrect final value of a loop counter in the loop continuation condition of a repetition statement can cause an off-by-one error'
-    \item `Initialize each counter and total, either in its declaration or in an assignment statement. Totals are normally initialized to 0. Counters are normally initialized to 0 or 1, depending on how they are used (we will show examples of when to use 0 and when to use 1).'
+    \item `Initialize each counter and total, either in its declaration or in an assignment statement. Totals are normally initialized to 0. Counters are normally initialized to 0 or 1, depending on how they are used (we will show examples of when to use 0 and when to use 1) .'
     \item `Infinite loops occur when the loop-continuation condition in a repetition statement never becomes false. To prevent this situation in a counter-controlled loop, ensure that the control variable is incremented (or decremented) during each iteration of the loop'
   \end{itemize}
 }
 
 \section{Loops}
-\frame{\frametitle{Loops (lazos, bucles, etc)}
+\frame{\frametitle{Loops (lazos, bucles, etc) }
   Patrones comunes
   \begin{itemize}
     \item Aplicación de de transformaciones a una lista
@@ -49,21 +49,15 @@
 }
 
 \frame{\frametitle{map}
-  \begin{lstlisting}
-    map(square, [1,2,3]) = [1,4,6]
-  \end{lstlisting}
+   \lstinline{map(square, [1,2,3]) = [1,4,6]}
 }
 
 \frame{\frametitle{filter\, select}
-  \begin{lstlisting}
-    filter(greaterThan5, [0,3,5,50]) = [50]
-  \end{lstlisting}
+   \lstinline{filter(greaterThan5, [0,3,5,50]) = [50]}
 }
 
 \frame{\frametitle{reduce\, fold\, inject}
-  \begin{lstlisting}
-    fold(sum, 0, [0,3,5,50]) = 58
-  \end{lstlisting}
+  \lstinline{fold(sum, 0, [0,3,5,50]) = 58}
 }
 
 \frame{\frametitle{Ejemplo: Quicksort con loops}
