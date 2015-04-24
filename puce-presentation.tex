@@ -6,7 +6,7 @@
 \begin{document}
 \title{Refactoring a patrones funcionales}
 \author{Juan Pablo Santos}
-\date{\today} 
+\date{24 de abril de 2015}
 
 \frame{\titlepage} 
 
@@ -45,20 +45,45 @@
 }
 
 \frame{\frametitle{}
-\Huge Tiene que haber una forma mejor!
+  \Huge Tiene que haber una forma mejor!
+}
+
+\section{Patrones funcionales}
+
+\frame{\frametitle{Funciones de orden superior}
+   \begin{itemize}
+     \item{Como argumentos}
+     \pause
+     \item{Como retorno}
+     \pause
+     \item{Primer nivel}
+   \end{itemize}
 }
 
 \frame{\frametitle{map}
-   \lstinline{map(square, [1,2,3]) = [1,4,6]}
+   \begin{itemize}
+     \item{\lstinline{map(square, [1,2,3]) = [1,4,6]}}
+     \item{\lstinline{[square(1), square(2), square(3)] = [1,4,6]}}
+   \end{itemize}
 }
 
-\frame{\frametitle{filter\, select}
-   \lstinline{filter(greaterThan5, [0,3,5,50]) = [50]}
+\frame{\frametitle{filter, select}
+   \begin{itemize}
+     \item{Predicados}
+     \item{\lstinline{function greaterThan5(value) \{ return value > 5 \}}}
+     \item{\lstinline{filter(greaterThan5, [0,3,5,50]) = [50]}}
+     \item{\lstinline{filter(greaterThan5, [False, False, False, True]) = [50]}}
+   \end{itemize}
 }
 
-\frame{\frametitle{reduce\, fold\, inject}
-  \lstinline{fold(sum, 0, [0,3,5,50]) = 58}
+\frame{\frametitle{reduce, fold, inject}
+  \begin{itemize}
+    \item{\lstinline{fold(sum, 0, [0,3,5,50]) = 58}}
+    \item{\lstinline{0+3+5+50 = 58}}
+  \end{itemize}
 }
+
+\section{Quicksort}
 
 \frame{\frametitle{Ejemplo: Quicksort con loops}
   \lstinputlisting[language=C, firstline=1, lastline=15]{quicksort.c}
@@ -68,8 +93,12 @@
   \lstinputlisting[language=C, firstline=15, lastline=28]{quicksort.c}
 }
 
-\frame{\frametitle{Ejemplo: Quicksort con JavaScript}
+\frame{\frametitle{Ejemplo: Quicksort con funciones de orden superior}
   \lstinputlisting[breaklines=true,language=C++,basicstyle=\footnotesize]{quicksort.js}
+}
+
+\frame{\frametitle{Ejemplo: Quicksort con Haskell}
+  \lstinputlisting[language=Haskell]{quicksort.hs}
 }
 
 \end{document}
